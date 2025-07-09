@@ -1,13 +1,15 @@
 import SearchBar from './Components/SearchBar/SearchBar';
+import HomeHeader from './Components/HomeHeader/HomeHeader';
+import HomeSearchSection from './Components/HomeSearchSection/HomeSearchSection';
 
 
 const App = () => {
-  let heroData = [
-    {text1:"",text2:""},
-  ]
   return (
     <div className="App">
-      <SearchBar />
+      <main>
+          <HomeHeader />
+          <HomeSearchSection />
+      </main>
     </div>
   )
 }
