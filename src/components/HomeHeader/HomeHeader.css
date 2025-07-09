@@ -1,0 +1,29 @@
+.header-container {
+    font-family: Arial, sans-serif;
+    padding: 4rem 0 0;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.header-container h1 {
+    font-size: 5vw;
+    color: black;
+    font-weight: 800;
+}
+
+.subheader-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;
+}
+
+.subheader-container p {
+    font-size: 1.3vw;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+}
