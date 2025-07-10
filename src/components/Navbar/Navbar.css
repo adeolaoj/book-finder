@@ -1,0 +1,33 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4e8265;
+  color: white;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  width: 95vw;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  text-align: left;
+}
+
+.tabs a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.tabs a:hover {
+  text-decoration: underline;
+}

@@ -31,8 +31,7 @@ const sampleData = [
 ]
 
 
-const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState('')
+const SearchBar = ({value, onChange}) => {
     const [searchResults, setSearchResults] = useState([])
 
     // Debounce function: trigger search results only after short delay in typing
@@ -59,12 +58,8 @@ const SearchBar = () => {
     )
 
     useEffect(() => {
-        handleSearch(searchTerm)
-    }, [searchTerm, handleSearch])
-
-    const handleInputChange = (e) => {
-        setSearchTerm(e.target.value)
-    }
+        handleSearch(value)
+    }, [value, handleSearch])
 
     return (
 
@@ -72,8 +67,8 @@ const SearchBar = () => {
         <form onSubmit={(e) => e.preventDefault()} className="search-form">
             <input
                 type="text"
-                value={searchTerm}
-                onChange={handleInputChange}
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
                 className="search-input"
                 placeholder="Search By Title, ISBN, Author..."
             />

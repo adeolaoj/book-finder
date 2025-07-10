@@ -1,6 +1,6 @@
 .header-container {
     font-family: Arial, sans-serif;
-    padding: 4rem 0 0;
+    padding: 4rem 2rem 0;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -10,6 +10,8 @@
     font-size: 5vw;
     color: black;
     font-weight: 800;
+    padding: 3rem 0 0 0;
+    padding-bottom: 0;
 }
 
 .subheader-container {

@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import BookInputRow from '../BookInputRow/BookInputRow'
+import Go from '../Buttons/Go'
+import './HomeSearchSection.css'
 
 const HomeSearchSection = () => {
   const [books, setBooks] = useState([''])
@@ -21,8 +23,12 @@ const HomeSearchSection = () => {
     setBooks(updated)
   }
 
+  const handleSearch = () => {
+    Navigate('/matches')
+  }
+
   return (
-    <div>
+    <div className="search-section">
       {books.map((book, index) => (
         <BookInputRow
           key={index}
@@ -36,6 +42,11 @@ const HomeSearchSection = () => {
           canAddMore={books.length < 3}
         />
       ))}
+      
+      <div className="search-buttons">
+            <Go onClick={handleSearch} />
+      </div>
+
     </div>
   )
 }
