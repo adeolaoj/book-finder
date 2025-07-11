@@ -1,9 +1,13 @@
 import React from 'react'
 import './ButtonStyles.css'
 
-const Go = () => {
+const Go = ({ onClick }) => {
     return (
-        <button className="go-button">Go</button>
+        <button
+            className="go-button"
+            onClick={onClick}>
+                Go
+            </button>
     )
 }
 

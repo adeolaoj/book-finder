@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import BookInputRow from '../BookInputRow/BookInputRow'
 import Go from '../Buttons/Go'
 import './HomeSearchSection.css'
+import { useNavigate } from 'react-router-dom'
 
 const HomeSearchSection = () => {
   const [books, setBooks] = useState([''])
+  const navigate = useNavigate()
 
   const handleAddBook = () => {
     if (books.length < 3) {
@@ -24,7 +26,7 @@ const HomeSearchSection = () => {
   }
 
   const handleSearch = () => {
-    Navigate('/matches')
+    navigate('/matches')
   }
 
   return (
