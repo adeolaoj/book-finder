@@ -1,6 +1,14 @@
 import './MatchesPage.css'
+import PersonalizedSearchButton from '../Components/Buttons/PersonalizedSearchButton'
+import { useNavigate } from 'react-router-dom'
 
 const MatchesPage = () => {
+  const navigate = useNavigate()
+
+  const handleSearch = () => {
+    navigate('/personalized-search')
+  }
+
   return (
     <div className="matches-page" >
       <div className="header">
@@ -11,16 +19,32 @@ const MatchesPage = () => {
       <div className="results">
         <h2>Top Matches</h2>
         <div className="result-books">
-          <div className="book">Book One</div>
-          <div className="book">Book Two</div>
-          <div className="book">Book Three</div>
-          <div className="book">Book Four</div>
+          <div className="book-column">
+            <div className="book">Book One</div>
+            <p className="book-title">Book One Title</p>
+          </div>
+          
+          <div className="book-column">
+            <div className="book">Book Two</div>
+            <p className="book-title">Book Two Title</p>
+          </div>
+
+          <div className="book-column">
+            <div className="book">Book Three</div>
+            <p className="book-title">Book Three Title</p>
+          </div>
+
+          <div className="book-column">
+            <div className="book">Book Four</div>
+            <p className="book-title">Book Four Title</p>
+          </div>
+
         </div>
       </div>
 
       <div className="search-buttons">
-        <div className="search-again">Search Again</div>
-        <div className="personalized-search">Get More Personalized Results</div>
+        <button className="search-again">Search Again</button>
+        <PersonalizedSearchButton onClick={handleSearch} />
       </div>
       
     
